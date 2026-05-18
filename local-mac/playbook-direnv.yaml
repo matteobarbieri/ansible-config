@@ -1,0 +1,7 @@
+- name: Install direnv on mac osx
+  hosts: localhost
+  tasks:
+   - name: Install package "direnv"
+     community.general.homebrew:
+       name: direnv
+       state: present

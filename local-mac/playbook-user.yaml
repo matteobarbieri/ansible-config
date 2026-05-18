@@ -1,0 +1,44 @@
+- name: set up zsh for user
+  hosts: 127.0.0.1
+  become: no
+  vars:
+    the_user: '{{ ansible_facts["user_id"] }}'
+  tasks:
+    - name: Download starship
+      ansible.builtin.command:
+        cmd: curl -s https://starship.rs/install.sh -o install_starship.sh
+        creates: install_starship.sh
+
+    - name: Install starship
+      become: yes
+      ansible.builtin.command:
+        cmd: sh install_starship.sh -y
+        creates: /usr/local/bin/starship
+
+    - name: Download oh my zsh
+      ansible.builtin.command:
+        cmd: curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -o install_oh_my_zsh.sh
+        creates: install_oh_my_zsh.sh
+
+    # - name: Install pexpect
+    #   pip:
+    #     name: pexpect
+
+    # - name: Install oh my zsh
+    #   ansible.builtin.expect:
+    #     command: sh install_oh_my_zsh.sh
+    #     responses:
+    #       "^.*$": "Y"
+    #     creates: .oh-my-zsh
+
+    - name: Copy .zshrc
+      ansible.builtin.copy:
+        src: ../dotfiles/.zshrc
+        dest: ~/.zshrc
+        follow: yes
+
+    - name: Copy .aliases
+      ansible.builtin.copy:
+        src: ../dotfiles/.aliases
+        dest: ~/.aliases
+        follow: yes
