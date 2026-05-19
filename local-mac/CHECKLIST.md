@@ -1,0 +1,14 @@
+- [] tmux
+- [] oh-my-zsh
+- [] .zshrc
+- [] zsh-syntax-highlight
+- [] zsh-autocomplete
+- [] starship
+- [] starship.toml
+- [] fd
+- [] bat
+- [] fzf
+- [] rg
+- [] Nerdfonts
+- [] vim
+- [] docker
