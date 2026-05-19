@@ -12,3 +12,5 @@
 - [] Nerdfonts
 - [] vim
 - [] docker
+- [] miniconda
+- [] uv
