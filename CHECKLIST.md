@@ -13,6 +13,7 @@
 - [] miniconda
 - [] uv
 - [] glow
+- [] claude
 - [] Dropbox
 - [] docker
 - [] Nerdfonts
