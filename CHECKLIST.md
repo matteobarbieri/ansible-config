@@ -14,6 +14,7 @@
 - [] uv
 - [] glow
 - [] claude
+- [] VS Code
 - [] Dropbox
 - [] docker
 - [] Nerdfonts
