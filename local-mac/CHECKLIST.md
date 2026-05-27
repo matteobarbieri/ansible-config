@@ -9,8 +9,10 @@
 - [] bat
 - [] fzf
 - [] rg
-- [] Nerdfonts
 - [] vim
-- [] docker
 - [] miniconda
 - [] uv
+- [] glow
+- [] Dropbox
+- [] docker
+- [] Nerdfonts
